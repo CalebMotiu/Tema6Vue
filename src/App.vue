@@ -1,25 +1,23 @@
 <script setup>
 import { RouterView } from "vue-router";
-import NavBar from "./components/NavBar.vue";
+import HomeView from "./views/HomeView.vue";
+// import NavBar from "./components/NavBar.vue";
 
 import { ref } from "vue";
-const helloText = ref("")
-function onHelloText(response) {
+// const helloText = ref("")
+// function onHelloText(response) {
 
-  helloText.value = response;
-}
+//   helloText.value = response;
+// }
 </script>
 
 <template>
-  <NavBar @on-hello-text="onHelloText" />
+  <!-- <NavBar @on-hello-text="onHelloText" /> -->
 
-  <pre class="mt-18">
-    {{ helloText.message }}
-
-  </pre>
-  <div class="mt-5">
+  <HomeView/>
+  <!-- <div class="mt-5">
     <RouterView />
-  </div>
+  </div> -->
 </template>
 
 <style>

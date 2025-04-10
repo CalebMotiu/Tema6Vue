@@ -1,6 +1,6 @@
 import express from "express"
 import bodyParser from "body-parser"
-import { kanbanRouter } from "./routing/kanban.router.js"
+import { notesRouter } from "./routing/notes.router.js"
 import { generalRouter } from "./routing/general.router.js"
 
 const api = express()
@@ -28,7 +28,7 @@ api.use(function (req, res, next) {
 })
 
 api.use(generalRouter)
-api.use("/kanban", kanbanRouter)
+api.use("/notes", notesRouter)
 
 api.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
